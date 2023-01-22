@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
@@ -10,13 +11,15 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">
-        <img class="main-header__logo-image"
-              src="img/logo-mobile.svg" width="34" height="38" alt="Супер-кот.">
-      </a>
-      <a class="main-header__logo">
-        <img class="main-header__logo-liters" src="img/logo-2.svg">
-      </a>
+      <div class="main-header__wrapper">
+        <a class="main-header__logo">
+          <img class="main-header__logo-image"
+                src="img/logo-mobile.svg" width="34" height="38" alt="Супер-кот.">
+        </a>
+        <a class="main-header__logo">
+          <img class="main-header__logo-liters" src="img/logo-2.svg">
+        </a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span>
@@ -54,11 +57,13 @@
             Занялся собой? Займись котом!
           </p>
         </div>
-        <img class="hero__image" src="img/cat-energy-jar.png" width="280" height="270"
-              alt="Баночка с питанием для котов.">
-        <a class="hero__choosing-of-program button" href="form.html">
-          Подобрать программу
-        </a>
+        <div class="hero__jar">
+          <img class="hero__image" src="img/cat-energy-jar.png" width="280" height="270"
+                alt="Баночка с питанием для котов.">
+          <a class="hero__choosing-of-program" href="form.html">
+            Подобрать программу
+          </a>
+        </div>
       </section>
       <!--Карточки с программами-->
       <section class="programs">

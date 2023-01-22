@@ -1,4 +1,30 @@
 .main-nav__list {
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 19px;
+  }
+}
+
+.main-nav__wrapper {
+  background-color: #ffffff;
+  width: 320px;
+  @media (min-width: @tablet-width){
+    width: 440px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 483px;
+
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

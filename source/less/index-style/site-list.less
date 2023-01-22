@@ -10,8 +10,22 @@
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
   list-style-type: none;
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .site-list__link {
   text-decoration: none;
+  color: @black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
