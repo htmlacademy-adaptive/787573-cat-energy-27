@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Подбор программы Кэт Энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -22,17 +26,17 @@
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--current">
-          <a href="#">
+          <a class="site-list__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">
+          <a class="site-list__link" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">
+          <a class="site-list__link" href="form.html">
             Подбор программы
           </a>
         </li>
@@ -58,20 +62,20 @@
             <label class="form__label" for="form__name">
               Имя:*
             </label>
-            <input class="form__input form__input--input-name" id="form__name" type="text" name="name" placeholder="барсик">
+            <input class="form__input form__input--name" id="form__name" type="text" name="name" placeholder="барсик">
           </div>
           <div class="form__input-design">
             <label class="form__label" for="form__weight">
               Вес (кг):*
             </label>
-            <input class="form__input form__input--input-weight" id="form__weight" type="number" name="weight" max="30"
+            <input class="form__input form__input--weight" id="form__weight" type="number" name="weight" max="30"
                     placeholder="7">
           </div>
           <div class="form__input-design">
             <label class="form__label" for="form__age">
               Возраст (лет):
             </label>
-            <input class="form__input form__input--input-age" id="form__age" type="number" name="age" max="40" placeholder="7">
+            <input class="form__input form__input--age" id="form__age" type="number" name="age" max="40" placeholder="7">
           </div>
         </fieldset>
         <fieldset class="form__part goal">
@@ -118,14 +122,14 @@
             <label class="owner-contacts__label" for="owner-contacts__email">
               E-mail:*
             </label>
-            <input class="form__input form__input--input-email" id="owner-contacts__email" type="email" name="email"
+            <input class="form__input form__input--email" id="owner-contacts__email" type="email" name="email"
                     placeholder="kuklachev@gmail.com">
           </div>
           <div class="owner-contacts__wrapper">
             <label class="owner-contacts__label" for="owner-contacts__tel">
               Телефон:*
             </label>
-            <input class="form__input form__input--input-phone" id="owner-contacts__tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+            <input class="form__input form__input--phone" id="owner-contacts__tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
           </div>
         </div>
       </fieldset>
@@ -209,8 +213,8 @@
       ул. Большая Конюшенная,
       д. 19/8 Санкт-Петербург
     </p>
-    <img class="contacts__image" src="img/map.png">
   </div>
+  <img class="contacts__image" src="img/map.png">
 </section>
 </main>
 <!--Подвал сайта-->

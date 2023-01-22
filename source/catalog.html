@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог Кэт Энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -21,17 +25,17 @@
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--current">
-          <a href="#">
+          <a class="site-list__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">
+          <a class="site-list__link" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">
+          <a class="site-list__link" href="form.html">
             Подбор программы
           </a>
         </li>
@@ -39,7 +43,7 @@
     </div>
   </nav>
 </header>
-<main class="main-container-catalog">
+<main class="main-container">
   <h1 class="main-container__title">
     Каталог продукции
   </h1>
@@ -47,228 +51,270 @@
     <div class="products__wrapper">
       <ul class="products__cards-list">
 
-        <li class="products__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/kitchen500.jpg" width="68" height="86">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/kitchen500.jpg" width="68" height="86">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Pro 500 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              500 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Курица
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              700 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                500 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Курица
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                700 ₽
+              </td>
+            </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
 
-        <li class="product__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/kitchen.jpg" width="84" height="100">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/kitchen.jpg" width="84" height="100">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Pro 1000 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              1000 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Курица
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              1000 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                1000 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Курица
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                1000 ₽
+              </td>
+            </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
 
 
-        <li class="product__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/fish500.jpg" width="68" height="86">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/fish500.jpg" width="68" height="86">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Pro 500 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              500 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Рыба
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              700 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                500 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Рыба
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                700 ₽
+              </td>
+            </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
 
-        <li class="product__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/fish.jpg" width="84" height="100">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/fish.jpg" width="84" height="100">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Pro 1000 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              1000 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Рыба
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              1000 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                1000 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Рыба
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                1000 ₽
+              </td>
+            </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
 
-        <li class="product__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/buckwheat500.jpg" width="68" height="86">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/buckwheat500.jpg" width="68" height="86">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Slim 500 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              500 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Гречка
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              400 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                500 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Гречка
+              </td>
+          </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                400 ₽
+              </td>
+          </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
 
-        <li class="product__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/buckwheat.jpg" width="84" height="100">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/buckwheat.jpg" width="84" height="100">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Slim 1000 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              1000 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Гречка
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              700 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                1000 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Гречка
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                700 ₽
+              </td>
+            </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
 
-        <li class="product__cards-item">
-          <a class="cards__link-image">
-            <img class="cards__image" src="img/images-catalog/rice.jpg" width="68" height="86">
+        <li class="products__item cards-catalog">
+          <a class="cards-catalog__link-image">
+            <img class="cards-catalog__image" src="img/images-catalog/rice.jpg" width="68" height="86">
           </a>
-          <a class="cards__link-title">
-            <p class="cards__title">
+          <a class="cards-catalog__link-title">
+            <p class="cards-catalog__title">
               Cat Energy Slim 500 г
             </p>
           </a>
-          <dl class="cards__product-description features-list">
-            <dt class="features-list__item">
-              Масса
-            </dt>
-            <dd class="features-list__description">
-              500 г
-            </dd>
-            <dt class="features-list__item">
-              Вкус
-            </dt>
-            <dd class="features-list__description">
-              Рис
-            </dd>
-            <dt class="features-list__item">
-              Цена
-            </dt>
-            <dd class="features-list__description">
-              500 ₽
-            </dd>
-          </dl>
+          <table class="cards-catalog__product-description features-list">
+            <tr>
+              <td class="features-list__item">
+                Масса
+              </td>
+              <td class="features-list__description">
+                500 г
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Вкус
+              </td>
+              <td class="features-list__description">
+                Рис
+              </td>
+            </tr>
+            <tr>
+              <td class="features-list__item">
+                Цена
+              </td>
+              <td class="features-list__description">
+                500 ₽
+              </td>
+            </tr>
+          </table>
           <button class="products__cards-button button">Заказать</button>
         </li>
       </ul>
@@ -350,8 +396,8 @@
       ул. Большая Конюшенная,
       д. 19/8 Санкт-Петербург
     </p>
-    <img class="contacts__image" src="img/map.png">
   </div>
+  <img class="contacts__image" src="img/map.png">
 </section>
 </main>
 <!--Подвал сайта-->

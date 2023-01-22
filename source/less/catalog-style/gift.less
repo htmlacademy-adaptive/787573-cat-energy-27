@@ -1,0 +1,26 @@
+.gift__wrapper {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/images-catalog/cat-catalog-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 187px 67px 43px 67px;
+}
+
+.gift__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  text-align: center;
+}
+
+.gift__text::before {
+  position: absolute;
+  left: 37%;
+  transform: translateY(-143%);
+  width: 80px;
+  height: 82px;
+  content: "";
+  background: url("../img/images-catalog/icon-gift.svg") no-repeat;
+}
