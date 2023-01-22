@@ -1,5 +1,5 @@
-.cards{
-  background-color:  @light-grey;
+.cards {
+  background-color: @light-grey;
   margin: 20px;
 }
 
@@ -14,8 +14,9 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000;
+  color: @black;
 }
+
 .cards__header::after {
   position: absolute;
   top: 50%;
@@ -24,10 +25,10 @@
   content: "";
   width: 70px;
   height: 50px;
-  background-image: url(../img/cat-slim.svg);
+  background-image: url("../img/cat-slim.svg");
   background-repeat: no-repeat;
 }
 
-.cards__header--pro::after{
-  background-image: url(../img/cat-pro.svg);
+.cards__header--pro::after {
+  background-image: url("../img/cat-pro.svg");
 }
