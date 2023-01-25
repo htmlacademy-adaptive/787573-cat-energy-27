@@ -1,22 +1,63 @@
+.main-form-container {
+  overflow-x: hidden;
+}
+
 .main-form-container__wrapper {
-  padding: 20px;
+  margin-bottom: 43px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .main-form-container__header {
-  font-family: 'Oswald';
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 37px;
+  font-family: "Oswald", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 41px;
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-top: 148px;
+  }
 }
 
 .main-form-container__text {
-  font-family: 'Oswald';
+  width: 226px;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   text-transform: uppercase;
-  margin: 40px 0
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    margin-bottom: 66px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

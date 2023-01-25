@@ -10,10 +10,25 @@
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
   list-style-type: none;
+
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    padding: 10px 0;
+    border-bottom: none;
+  }
+}
+
+.site-list__item--current::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    width: 64px;
+    height: 2px;
+    background-color: #68b738;
+    position: absolute;
+    bottom: 0;
+    left: 1px;
   }
 }
 
@@ -27,5 +42,13 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: @white;
+    background-color: @green;
   }
 }

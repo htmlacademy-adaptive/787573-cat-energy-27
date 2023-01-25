@@ -1,12 +1,19 @@
-.cards{
-  background-color:  @light-grey;
-  margin: 20px;
+.cards {
+  background-color: @light-grey;
+  max-width: 281px;
+  margin: 20px 0 20px 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 371px;
+    max-width: 711px;
+  }
 }
 
 .cards__header {
   position: relative;
   margin: 0 0 0 91px;
-  padding-top: 29px;
+  padding-top: 28px;
   box-sizing: border-box;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -14,8 +21,17 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 76px;
+    margin: 0 0 0 56px;
+  }
 }
+
 .cards__header::after {
   position: absolute;
   top: 50%;
@@ -24,11 +40,83 @@
   content: "";
   width: 70px;
   height: 50px;
-  background-image: url(../img/cat-slim.svg);
+  background-image: url("../img/cat-slim.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(23px);
+    left: 396px;
+    width: 200px;
+    height: 211px;
+    background-size: 195px;
+  }
+}
+
+.cards__header--pro::after {
+  background-image: url("../img/cat-pro.svg");
+  left: -79px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 264px;
+    left: 359px;
+    width: 265px;
+    transform: translateY(39px);
+  }
+}
+
+.cards__description {
+  padding: 16px 20px;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: @black;
+    width: 315px;
+    margin: 24px 0 52px 56px;
+  }
+}
+
+.cards__link-catalog {
+  position: relative;
+  padding-left: 20px;
+  text-decoration: none;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 56px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.cards__link-catalog::before {
+  position: absolute;
+  content: "";
+  width: 240px;
+  height: 1px;
+  background-color: #d9d9d9;
+  bottom: 40px;
+}
+
+.cards__link-catalog::after {
+  position: absolute;
+  transform: translateY(1px);
+  left: 121px;
+  content: "";
+  width: 25px;
+  height: 12px;
+  background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
 }
 
-.cards__header--pro::after{
-  background-image: url(../img/cat-pro.svg);
+.cards__link-catalog--pro::after {
+  left: 117px;
 }
-

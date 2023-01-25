@@ -4,32 +4,61 @@
   background-color: @grey;
 }
 
-.example__achievements-list{
-  display: flex;
+.example__header {
+  margin: 5px 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
 }
 
-.example__achievements-items{
+.example__description {
+  margin-top: 39px;
+}
+
+.example__achievements-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 21px;
+}
+
+.example__achievements-items {
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
-}
-.example__achievements-description{
-  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  width: 124px;
+  height: 54px;
 }
 
-.example__achievements-number{
-  padding-top: 14px;
+.example__achievements-description {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  background-color: #eaeaea;
+  text-transform: lowercase;
+  width: 86px;
+  margin-left: 17px;
+  margin-top: 8px;
+}
+
+.example__achievements-number {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
   color: @black;
+  margin: 0;
+  padding-top: 13px;
 }
 
 .example__price {
-  margin: 0;
+  margin: 13px 0 0 0;
   padding: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -39,4 +68,132 @@
   text-align: center;
   text-transform: uppercase;
   color: @black;
+}
+
+.example__slider {
+  //position: relative;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    //position: absolute;
+    bottom: 400px;
+    left: 50%;
+    transform: translateX(-100%);
+    z-index: 4;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translate(48px, 15px);
+  }
+}
+
+.example__scale {
+  //position: absolute;
+  top: 7px;
+  left: 50%;
+  z-index: 1;
+  content: "";
+  width: 4px;
+  height: 256px;
+  background-color: @strip-grey;
+  border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    top: 46px;
+    left: 100%;
+    height: 512px;
+  }
+}
+
+.example__button:hover + .example__scale,
+.example__button:focus + .example__scale {
+  background-color: #68b738;
+  transition: 0.2s ease-out 0s;
+}
+
+.example__button:active + .example__scale {
+  background-color: rgba(104, 183, 56, 0.6);
+}
+
+.example__button:hover > .example__curtain-icon,
+.example__button:focus > .example__curtain-icon {
+  color: #68b738;
+  transition: 0.2s ease-out 0s;
+}
+
+.example__button:active > .example__curtain-icon {
+  color: rgba(104, 183, 56, 0.6);
+}
+
+.example__images {
+  display: grid;
+  grid-template-columns: 140px 140px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 280px 280px;
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 560px;
+  }
+}
+
+.example__curtain-icon {
+  height: 50px;
+  color: @strip-grey;
+}
+
+.example__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 2px), -50%);
+  z-index: 2;
+  height: 50px;
+  color: @strip-grey;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    top: calc(100% + 45px);
+    left: 100%;
+  }
+}
+
+.example__image-fat,
+.example__image-slim {
+  height: 256px;
+  object-fit: cover;
+  object-position: 0 0;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+}
+
+.example__image-fat {
+  object-position: 0 0;
+}
+
+.example__image-slim {
+  object-position: 99% 0;
+}
+
+.example__background {
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    height: 460px;
+    padding-left: 0;
+    background-color: @grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
 }

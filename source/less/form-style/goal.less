@@ -1,5 +1,20 @@
+.goal {
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
 .goal__label {
-  font-family: 'Oswald';
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8,6 +23,116 @@
   color: #222222;
 }
 
+.goal__list {
+  position: relative;
+  margin: 0;
+  list-style-type: none;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-bottom: 20px;
+  margin-bottom: 4px;
+
+  @media (max-width: @mobile-width-only) {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1000%;
+      height: 1px;
+      background-color: @grey-2;
+      top: 157px;
+      left: -30px;
+    }
+
+    &::after {
+      top: 1px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding-top: 9px;
+    padding-bottom: 27px;
+    margin-top: 47px;
+    margin-bottom: 46px;
+    padding-left: 30px;
+    border: 1px solid #eaeaea;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 570px;
+    padding-top: 8px;
+    padding-bottom: 27px;
+    padding-left: 29px;
+  }
+}
+
 .goal__item {
-  margin: 13px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: rgba(34, 34, 34, 1);
+
+  @media (min-width: @tablet-width) {
+    padding-top: 12px;
+    padding-bottom: 1px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.goal__control {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  padding-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.goal__mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid @middle-grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.goal__control:hover .goal__mark {
+  border: 2px solid rgba(186, 186, 186, 1);
+}
+
+.goal__input:disabled + .goal__mark {
+  opacity: 0.3;
+}
+
+.goal__input:disabled ~ .goal__label {
+  opacity: 0.3;
+}
+
+.goal__input:checked + .goal__mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  content: "";
+  background-color: @green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
