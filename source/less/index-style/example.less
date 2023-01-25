@@ -2,6 +2,14 @@
   margin-top: 20px;
   padding: 20px;
   background-color: @grey;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
 }
 
 .example__header {
@@ -11,10 +19,20 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__description {
   margin-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__achievements-list {
@@ -55,6 +73,11 @@
   color: @black;
   margin: 0;
   padding-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__price {
@@ -71,13 +94,13 @@
 }
 
 .example__slider {
-  //position: relative;
+  position: relative;
   width: 280px;
   height: 256px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    //position: absolute;
+    position: absolute;
     bottom: 400px;
     left: 50%;
     transform: translateX(-100%);
@@ -86,12 +109,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    transform: translate(48px, 15px);
+    transform: translate(156px, 15px);
+    position: relative;
   }
 }
 
 .example__scale {
-  //position: absolute;
+  position: absolute;
   top: 7px;
   left: 50%;
   z-index: 1;
@@ -192,8 +216,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 0;
-    height: 0;
-    background-color: transparent;
+    min-width: 608px;
+    height: 567px;
+    background-color: #eaeaea;
+    position: absolute;
+    left: 760px;
   }
 }

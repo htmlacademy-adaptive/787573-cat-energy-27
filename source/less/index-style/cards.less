@@ -104,6 +104,10 @@
   height: 1px;
   background-color: #d9d9d9;
   bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .cards__link-catalog::after {
@@ -115,8 +119,17 @@
   height: 12px;
   background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 143px;
+    transform: translateY(9px);
+  }
 }
 
 .cards__link-catalog--pro::after {
   left: 117px;
+
+  @media (min-width: @tablet-width) {
+    left: 139px;
+  }
 }
