@@ -1,13 +1,123 @@
-.main-footer__wrapper {
+.main-footer {
+  background-color: @light-grey;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.main-footer__social {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: 40px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding-top: 23px;
+    padding-left: 10px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.main-footer__wrapper {
+  padding: 21px 20px 22px 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 29px 30px 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 51px 109px 30px 79px;
+  }
 }
 
 .main-footer__copyright {
   display: flex;
+  justify-content: center;
+}
+
+.main-footer__logo {
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-left: 8px;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-out 0s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.main-footer__logo-html {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  text-decoration: none;
+  fill: @dark-grey;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: @tablet-width) {
+    padding-top: 21px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    padding: 0;
+  }
+}
+
+.main-footer__logo-left {
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-footer__logo-right {
+  padding-top: 22px;
+  padding-left: 141px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-left: 23px;
+  }
+}
+
+.main-footer__link-icon {
+  fill: @strip-grey;
+
+  &:hover {
+    fill: @green;
+    transition: 0.2s ease-out 0s;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
 }

@@ -1,8 +1,33 @@
 .title-decoration {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -23px;
+  padding: 0;
+  padding-right: 23px;
+  padding-left: 21px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  font-weight: 400;
   color: @black;
+  text-transform: none;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -45px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -44px;
+  }
 }
