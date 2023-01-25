@@ -1,24 +1,203 @@
 .extra-products {
-  padding: 20px;
-}
+  position: relative;
 
-.extra-products__list {
-  list-style-type: none;
-  padding: 0;
+  @media (max-width: @mobile-width-only) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
+  }
 }
 
 .extra-products__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+  top: -4px;
+  margin-bottom: 29px;
+  padding-left: 44px;
+
+  &::after {
+    @media (max-width: @mobile-width-only) {
+      position: absolute;
+      top: -26px;
+      left: 0;
+      width: 1000px;
+      height: 1px;
+      content: "";
+      background-color: @grey-2;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -15px;
+    margin-bottom: 64px;
+    padding-top: 32px;
+    padding-left: 38px;
+    margin-left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -17px;
+    padding-left: 45px;
+    margin-left: -46px;
+  }
+}
+
+.extra-products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 80px;
+    padding: 0;
+  }
+}
+
+.extra-products__item {
+  padding-top: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid @middle-grey;
+
+  &:first-child {
+    @media (max-width: @mobile-width-only) {
+      border-top: 1px solid @middle-grey;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      border-bottom: 1px solid @middle-grey;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    min-width: 708px;
+    margin: 0;
+    padding: 26px 38px 28px 38px;
+    box-sizing: border-box;
+    border: 1px solid @middle-grey;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 896px;
+    padding: 14px 0 17px 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.extra-products__design-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 326px 325px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.extra-products__price {
+  @media (min-width: @tablet-width) {
+    margin-left: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-right: 40px;
+  }
 }
 
 .extra-products__name {
+  margin: 0;
+  padding-bottom: 13px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.extra-products__details {
+  display: flex;
+  justify-content: space-between;
+  min-width: 280px;
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    justify-content: end;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    padding-left: 0;
+  }
+}
+
+.extra-products__button {
+  display: block;
+  min-width: 280px;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  background-color: @green;
+
+  &:hover {
+    background-color: rgb(95, 172, 47);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    min-width: 632px;
+    margin: 0 auto;
+    margin-top: 24px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 244px;
+    margin: 0;
+  }
 }

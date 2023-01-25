@@ -1,16 +1,119 @@
+.add-more {
+  @media (min-width: @desktop-width) {
+    min-width: 245px;
+  }
+}
+
+.add-more__wrapper {
+  @media (min-width: @tablet-width) {
+    border: 1px solid @grey;
+  }
+}
+
 .add-more__title {
+  position: relative;
+  width: 204px;
+  margin: 0 auto;
+  margin-top: 78px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
+  text-align: center;
   text-transform: uppercase;
+  color: @black;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: -39px;
+    left: 86px;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: @grey-3;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 134px;
+    margin: 0 auto;
+    margin-top: 161px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before,
+    &::after {
+      top: -66px;
+      left: 37px;
+      width: 60px;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before,
+    &::after {
+      top: -80px;
+    }
+  }
 }
 
 .add-more__text {
+  margin: 0;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 400;
   font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 165px;
+    margin: 0 auto;
+    margin-top: 23px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .add-more__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 34px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @dark-grey;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 252px;
+    margin-top: 87px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
+
+  &:hover {
+    background-color: @grey-2;
+  }
+
+  &:active {
+    background-color: @grey-2;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
